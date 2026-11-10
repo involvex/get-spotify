@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "get-spotify"
+version = "0.1.0"
+description = "Download mp3/mp4 media exposed by Spotify embed pages"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "involvex" }]
+keywords = ["spotify", "podcast", "cli", "download"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Sound/Audio",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/involvex/get-spotify"
+Repository = "https://github.com/involvex/get-spotify"
+Issues = "https://github.com/involvex/get-spotify/issues"
+
+[project.scripts]
+get-spotify = "get_spotify.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/get_spotify"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src",
+  "/tests",
+  "/README.md",
+  "/AGENTS.md",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.uv]
+default-groups = ["dev"]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
