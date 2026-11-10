@@ -1,6 +1,11 @@
 from pathlib import Path
 
-from get_spotify.embed import extract_episode_ids, extract_media, extract_title, parse_embed
+from get_spotify.embed import (
+    extract_episode_ids,
+    extract_media,
+    extract_title,
+    parse_embed,
+)
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -18,12 +23,13 @@ def test_extract_passthrough_and_video_skips_images_and_preview():
 
     assert any(url.endswith(".mp3") or ".mp3?" in url for url in urls)
     assert any(url.endswith(".mp4") for url in urls)
-    assert not any("favicon" in url or url.endswith(".png") or url.endswith(".jpeg") for url in urls)
+    assert not any(
+        "favicon" in url or url.endswith(".png") or url.endswith(".jpeg")
+        for url in urls
+    )
     assert not any("mp3-preview" in url for url in urls)
 
-    passthrough = [
-        item for item in media if item.kind == "passthrough"
-    ]
+    passthrough = [item for item in media if item.kind == "passthrough"]
     assert passthrough
     assert kinds[passthrough[0].url] == "passthrough"
 

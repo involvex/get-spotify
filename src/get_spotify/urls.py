@@ -73,9 +73,7 @@ def parse_spotify_url(raw: str) -> SpotifyRef:
     parsed = urlparse(text)
     host = (parsed.hostname or "").lower()
     if host not in {"open.spotify.com", "www.open.spotify.com"}:
-        raise UrlError(
-            f"Unsupported host {host!r}; expected open.spotify.com"
-        )
+        raise UrlError(f"Unsupported host {host!r}; expected open.spotify.com")
 
     path_match = _OPEN_PATH.match(parsed.path or "")
     if not path_match:

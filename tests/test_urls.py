@@ -32,9 +32,7 @@ def test_parse_video_embed_url():
 
 
 def test_parse_track_and_uri():
-    track = parse_spotify_url(
-        "https://open.spotify.com/track/11dFghVXANMlKmJXsNCbNl"
-    )
+    track = parse_spotify_url("https://open.spotify.com/track/11dFghVXANMlKmJXsNCbNl")
     assert track.type == "track"
     assert track.embed_candidates() == [
         "https://open.spotify.com/embed/track/11dFghVXANMlKmJXsNCbNl"

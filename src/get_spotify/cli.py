@@ -71,9 +71,7 @@ def _merge_media(
     bucket = {item.url: item for item in existing}
     for item in incoming:
         prev = bucket.get(item.url)
-        if prev is None or (
-            item.kind != "preview" and prev.kind == "preview"
-        ):
+        if prev is None or (item.kind != "preview" and prev.kind == "preview"):
             bucket[item.url] = item
     merged = list(bucket.values())
     if _is_full_media(merged):
