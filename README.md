@@ -1,5 +1,11 @@
 # get-spotify
 
+[![PyPI](https://img.shields.io/pypi/v/get-spotify.svg)](https://pypi.org/project/get-spotify/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/get-spotify.svg)](https://pypi.org/project/get-spotify/)
+[![Python versions](https://img.shields.io/pypi/pyversions/get-spotify.svg)](https://pypi.org/project/get-spotify/)
+[![License](https://img.shields.io/pypi/l/get-spotify.svg)](https://pypi.org/project/get-spotify/)
+[![Used by](https://img.shields.io/static/v1?label=used%20by&message=dependents&color=informational)](https://github.com/involvex/get-spotify/network/dependents)
+
 CLI that downloads **mp3/mp4** media URLs exposed by Spotify **embed** pages.
 
 It does **not** bypass DRM. It only downloads direct media links already present
