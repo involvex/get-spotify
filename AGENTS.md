@@ -38,12 +38,21 @@ pytest
 python -m get_spotify "https://open.spotify.com/episode/..." --dry-run
 ```
 
-Install from GitHub (after the repo is public):
+Install released package:
+
+```bash
+pip install get-spotify
+uv tool install get-spotify
+```
+
+Install from GitHub (main / unreleased):
 
 ```bash
 pip install git+https://github.com/involvex/get-spotify.git
 uv tool install git+https://github.com/involvex/get-spotify.git
 ```
+
+PyPI: https://pypi.org/project/get-spotify/
 
 ## Invariants
 

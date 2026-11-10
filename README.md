@@ -9,20 +9,23 @@ and images are skipped).
 
 ## Install
 
-### From GitHub (pip)
+PyPI: [get-spotify 0.1.0](https://pypi.org/project/get-spotify/0.1.0/)
+
+### From PyPI (recommended)
+
+```bash
+pip install get-spotify
+
+# or with uv
+uv tool install get-spotify
+uvx get-spotify --help
+```
+
+### From GitHub
 
 ```bash
 pip install git+https://github.com/involvex/get-spotify.git
-```
-
-### From GitHub (uv)
-
-```bash
-# Install as a user tool (gets the `get-spotify` command)
 uv tool install git+https://github.com/involvex/get-spotify.git
-
-# Or one-off without installing permanently
-uvx --from git+https://github.com/involvex/get-spotify.git get-spotify --help
 ```
 
 ### Local development

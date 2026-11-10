@@ -27,6 +27,8 @@ dev = ["pytest>=8.0"]
 Homepage = "https://github.com/involvex/get-spotify"
 Repository = "https://github.com/involvex/get-spotify"
 Issues = "https://github.com/involvex/get-spotify/issues"
+Changelog = "https://github.com/involvex/get-spotify/releases"
+Documentation = "https://github.com/involvex/get-spotify#readme"
 
 [project.scripts]
 get-spotify = "get_spotify.cli:main"
